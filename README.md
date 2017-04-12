@@ -1,6 +1,8 @@
 # An PocketMineMP (PMMP) Docker Container
 
-This is an PocketMine-MP (PMMP) container You can start it as a daemon with 
+This is an PocketMine-MP (PMMP) container
+
+You can start it as a daemon with 
 ```
 docker run -d -p 19132:19132 whaxion/pmmp
 ```
