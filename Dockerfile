@@ -2,15 +2,14 @@ FROM php:7
 
 RUN useradd pmmp
 RUN mkdir /home/pmmp/
-ADD https://raw.githubusercontent.com/pmmp/php-build-scripts/master/installer.sh /home/pmmp/installer.sh
-RUN chown -R pmmp:pmmp /home/pmmp/
+RUN chown -R pmmp /home/pmmp/
+
+RUN apt-get update && apt-get install -y wget
 
 USER pmmp
 WORKDIR /home/pmmp/
 
-RUN chmod 755 installer.sh
-
-RUN bash installer.sh
+RUN wget -q -O - https://get.pmmp.io | bash -s -
 
 EXPOSE 19132
 
