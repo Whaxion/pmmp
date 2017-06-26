@@ -2,7 +2,7 @@ FROM php:7
 
 RUN useradd pmmp
 RUN mkdir /home/pmmp/
-COPY installer.sh /home/pmmp/
+COPY https://raw.githubusercontent.com/pmmp/php-build-scripts/master/installer.sh /home/pmmp/installer.sh
 RUN chown -R pmmp:pmmp /home/pmmp/
 
 USER pmmp
